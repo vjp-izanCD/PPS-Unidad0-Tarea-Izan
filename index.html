@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculadoraPython - Documentación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(to right, #4fc3f7, #29b6f6);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Container */
+        .container {
+            display: flex;
+            min-height: calc(100vh - 60px);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background-color: #fafafa;
+            border-right: 1px solid #e0e0e0;
+            padding: 20px 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 10px 30px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            color: #03a9f4;
+            font-size: 14px;
+        }
+
+        .sidebar li:hover {
+            background-color: #e3f2fd;
+        }
+
+        .sidebar li.active {
+            border-left: 4px solid #03a9f4;
+            background-color: #e3f2fd;
+            padding-left: 26px;
+        }
+
+        /* Main content */
+        .content {
+            flex: 1;
+            padding: 40px 60px;
+            background-color: white;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            color: #444;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            color: #444;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 300;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .content p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        /* Code blocks */
+        .code-block {
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 3px;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+        }
+
+        .code-header {
+            color: #ff9800;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .code-content {
+            color: #555;
+        }
+
+        .code-command {
+            color: #000;
+        }
+
+        .error-text {
+            color: #666;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+
+        .error-code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #fff;
+            padding: 2px 5px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+        }
+
+        .install-block {
+            background-color: #fafafa;
+            border-left: 3px solid #ccc;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>CalculadoraPython</h1>
+        <div class="search-box">
+            <span>🔍</span>
+            <span>Search</span>
+        </div>
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul>
+                <li>CalculadoraPython</li>
+                <li class="active">Ejecución</li>
+                <li>Características</li>
+                <li>Problemas</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h1>CalculadoraPython</h1>
+            <p>Bienvenido a la calculadora gráfica hecha en Python.</p>
+
+            <h2>Ejecución</h2>
+            <p>Para ejecutarlo tenemos que situarnos dentro de la carpeta del proyecto y ejecutar en el terminal de comandos python3 con el nombre del archivo.py</p>
+
+            <div class="code-block">
+                <div class="code-header">cd</div>
+                <div class="code-content">CalculadoraPython</div>
+                <div class="code-command">python3 src/Calculadora.py</div>
+            </div>
+
+            <p class="error-text">Si se nos muestra un error <span class="error-code">ModuleNotFoundError: No module named 'tkinter'</span>, tenemos que instalar el paquete <span class="error-code">phyton-tk</span></p>
+
+            <div class="install-block">
+                # Para Python 3<br>
+                sudo apt update<br>
+                sudo apt install python3-tk
+            </div>
+        </main>
+    </div>
+</body>
+</html>
