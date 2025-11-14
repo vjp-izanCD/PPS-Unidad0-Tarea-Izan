@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Gestión del repositorio con Git y GitHub - Calculadora Python</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Calculadora Python</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#gestion-del-repositorio-con-git-y-github" class="nav-link">Gestión del repositorio con Git y GitHub</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-creacion-del-repositorio-local" class="nav-link">1. Creación del repositorio local</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-estructuracion-del-proyecto" class="nav-link">2. Estructuración del proyecto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-anadir-archivos-al-staging-area" class="nav-link">3. Añadir archivos al staging area</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-realizar-el-primer-commit" class="nav-link">4. Realizar el primer commit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-creacion-del-repositorio-remoto-en-github" class="nav-link">5. Creación del repositorio remoto en GitHub</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-vincular-repositorio-local-con-remoto" class="nav-link">6. Vincular repositorio local con remoto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#7-verificar-repositorios-remotos" class="nav-link">7. Verificar repositorios remotos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#8-subir-cambios-al-repositorio-remoto" class="nav-link">8. Subir cambios al repositorio remoto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#9-anadir-colaborador-al-repositorio" class="nav-link">9. Añadir colaborador al repositorio</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#10-comandos-adicionales-utiles" class="nav-link">10. Comandos adicionales útiles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conclusion" class="nav-link">Conclusión</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="gestion-del-repositorio-con-git-y-github">Gestión del repositorio con Git y GitHub</h1>
+<p>En este apartado se explican y justifican los comandos utilizados para la creación y gestión del repositorio, así como su vinculación con GitHub.</p>
+<hr />
+<h2 id="1-creacion-del-repositorio-local">1. Creación del repositorio local</h2>
+<h3 id="comando">Comando:</h3>
+<pre><code class="language-bash">git init
+</code></pre>
+<h3 id="justificacion">Justificación:</h3>
+<p>Este comando inicializa un nuevo repositorio local de Git en el directorio actual. Es el punto de partida fundamental para comenzar a trabajar con control de versiones, creando la carpeta oculta <code>.git</code> que almacenará toda la información del historial del proyecto.</p>
+<hr />
+<h2 id="2-estructuracion-del-proyecto">2. Estructuración del proyecto</h2>
+<h3 id="comando_1">Comando:</h3>
+<pre><code class="language-bash">mkdir -p calculator docs &amp;&amp; touch calculator/gui.py calculator/__init__.py docs/index.md mkdocs.yml README.md requiriments.txt
+</code></pre>
+<h3 id="justificacion_1">Justificación:</h3>
+<p>Este comando realiza dos operaciones en una sola línea:
+- <code>mkdir -p calculator docs</code>: Crea las carpetas <code>calculator</code> y <code>docs</code> de forma simultánea. El flag <code>-p</code> permite crear múltiples directorios y no genera error si ya existen.
+- <code>touch ...</code>: Crea todos los archivos necesarios vacíos de una sola vez.</p>
+<p>Esta práctica demuestra eficiencia en la terminal y permite establecer una estructura profesional del proyecto desde el inicio.</p>
+<hr />
+<h2 id="3-anadir-archivos-al-staging-area">3. Añadir archivos al staging area</h2>
+<h3 id="comando_2">Comando:</h3>
+<pre><code class="language-bash">git add .
+</code></pre>
+<h3 id="justificacion_2">Justificación:</h3>
+<p>Este comando añade todos los archivos del directorio actual (incluyendo subdirectorios) al área de preparación (staging area). El punto <code>.</code> representa el directorio actual, por lo que Git rastreará todos los cambios realizados. Esto prepara los archivos para ser incluidos en el próximo commit.</p>
+<hr />
+<h2 id="4-realizar-el-primer-commit">4. Realizar el primer commit</h2>
+<h3 id="comando_3">Comando:</h3>
+<pre><code class="language-bash">git commit -m &quot;Estructura base del proyecto&quot;
+</code></pre>
+<h3 id="justificacion_3">Justificación:</h3>
+<p>Este comando crea un snapshot (instantánea) del estado actual del proyecto con un mensaje descriptivo. El flag <code>-m</code> permite escribir el mensaje del commit directamente en la línea de comando. Un buen mensaje de commit facilita el seguimiento del historial y comunica claramente qué cambios se realizaron.</p>
+<hr />
+<h2 id="5-creacion-del-repositorio-remoto-en-github">5. Creación del repositorio remoto en GitHub</h2>
+<h3 id="pasos">Pasos:</h3>
+<ol>
+<li>Acceder a <a href="https://github.com">GitHub</a></li>
+<li>Hacer clic en el botón "New" o "+" para crear un nuevo repositorio</li>
+<li>Nombrar el repositorio siguiendo la nomenclatura requerida: <code>PPS-Unidad0-Tarea-CorreaDiazIzan</code></li>
+<li>Seleccionar visibilidad pública o privada según los requisitos</li>
+<li>No inicializar con README (ya lo tenemos localmente)</li>
+</ol>
+<h3 id="justificacion_4">Justificación:</h3>
+<p>GitHub actúa como repositorio remoto, permitiendo:
+- <strong>Backup en la nube</strong>: Protección contra pérdida de datos local
+- <strong>Colaboración</strong>: Facilita que el profesor y otros colaboradores accedan al proyecto
+- <strong>Historial distribuido</strong>: Múltiples copias del historial del proyecto
+- <strong>Integración con herramientas</strong>: Permite usar GitHub Actions, Pages, etc.</p>
+<hr />
+<h2 id="6-vincular-repositorio-local-con-remoto">6. Vincular repositorio local con remoto</h2>
+<h3 id="comando_4">Comando:</h3>
+<pre><code class="language-bash">git remote add origin https://github.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan.git
+</code></pre>
+<h3 id="justificacion_5">Justificación:</h3>
+<p>Este comando conecta nuestro repositorio local con el repositorio remoto en GitHub. La palabra <code>origin</code> es el nombre convencional que se le da al repositorio remoto principal. A partir de este momento, podemos sincronizar cambios entre ambos repositorios.</p>
+<hr />
+<h2 id="7-verificar-repositorios-remotos">7. Verificar repositorios remotos</h2>
+<h3 id="comando_5">Comando:</h3>
+<pre><code class="language-bash">git remote -v
+</code></pre>
+<h3 id="justificacion_6">Justificación:</h3>
+<p>Este comando muestra la lista de repositorios remotos configurados junto con sus URLs para fetch (descarga) y push (subida). Es útil para verificar que la conexión se estableció correctamente.</p>
+<hr />
+<h2 id="8-subir-cambios-al-repositorio-remoto">8. Subir cambios al repositorio remoto</h2>
+<h3 id="comando_6">Comando:</h3>
+<pre><code class="language-bash">git push -u origin main
+</code></pre>
+<h3 id="justificacion_7">Justificación:</h3>
+<ul>
+<li><code>push</code>: Envía los commits locales al repositorio remoto</li>
+<li><code>-u origin main</code>: Establece la rama <code>main</code> del remoto <code>origin</code> como rama de seguimiento por defecto</li>
+<li>El flag <code>-u</code> (o <code>--set-upstream</code>) permite que en futuros push/pull solo necesitemos escribir <code>git push</code> sin especificar el remoto y la rama</li>
+</ul>
+<hr />
+<h2 id="9-anadir-colaborador-al-repositorio">9. Añadir colaborador al repositorio</h2>
+<h3 id="pasos_1">Pasos:</h3>
+<ol>
+<li>En GitHub, ir a Settings del repositorio</li>
+<li>Seleccionar "Collaborators" en el menú lateral</li>
+<li>Hacer clic en "Add people"</li>
+<li>Buscar y añadir al usuario del profesor: <code>PPSvjp</code></li>
+<li>Confirmar la invitación</li>
+</ol>
+<h3 id="justificacion_8">Justificación:</h3>
+<p>Añadir al profesor como colaborador es un requisito indispensable de la tarea. Esto le otorga permisos de lectura y escritura en el repositorio, permitiéndole:
+- Revisar el código y la documentación
+- Clonar el repositorio
+- Dejar comentarios y feedback
+- Verificar el historial de commits</p>
+<hr />
+<h2 id="10-comandos-adicionales-utiles">10. Comandos adicionales útiles</h2>
+<h3 id="ver-estado-del-repositorio">Ver estado del repositorio:</h3>
+<pre><code class="language-bash">git status
+</code></pre>
+<p>Muestra qué archivos han sido modificados, cuáles están en staging y cuáles no están siendo rastreados.</p>
+<h3 id="ver-historial-de-commits">Ver historial de commits:</h3>
+<pre><code class="language-bash">git log
+</code></pre>
+<p>Muestra el historial completo de commits con autor, fecha y mensaje.</p>
+<h3 id="ver-historial-resumido">Ver historial resumido:</h3>
+<pre><code class="language-bash">git log --oneline
+</code></pre>
+<p>Muestra el historial en formato compacto, ideal para ver rápidamente la evolución del proyecto.</p>
+<h3 id="crear-y-cambiar-de-rama">Crear y cambiar de rama:</h3>
+<pre><code class="language-bash">git checkout -b nombre-rama
+</code></pre>
+<p>Crea una nueva rama y cambia a ella inmediatamente.</p>
+<h3 id="actualizar-repositorio-local">Actualizar repositorio local:</h3>
+<pre><code class="language-bash">git pull
+</code></pre>
+<p>Descarga y fusiona los cambios del repositorio remoto a la rama actual.</p>
+<hr />
+<h2 id="conclusion">Conclusión</h2>
+<p>El dominio de estos comandos de Git es fundamental para cualquier desarrollador. Permiten:
+- Mantener un historial ordenado y documentado del proyecto
+- Trabajar de forma colaborativa de manera eficiente
+- Revertir cambios cuando sea necesario
+- Experimentar con nuevas funcionalidades sin afectar el código principal
+- Sincronizar trabajo entre diferentes equipos y ubicaciones</p>
+<p>La correcta gestión del repositorio demuestra profesionalismo y buenas prácticas de desarrollo de software.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
