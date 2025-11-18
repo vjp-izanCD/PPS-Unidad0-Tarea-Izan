@@ -64,7 +64,7 @@ Este proceso inicial puede tardar entre 1-5 minutos.
 
 **Página de configuración:**
 
-![GitHub Pages Settings](../images/Captura7.png)
+![GitHub Pages Settings](https://raw.githubusercontent.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan/main/images/Captura7.png)
 
 ---
 
