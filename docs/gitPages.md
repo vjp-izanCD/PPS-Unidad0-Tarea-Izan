@@ -60,6 +60,12 @@ GitHub Pages es un servicio de alojamiento web estático gratuito ofrecido por G
 
 Este proceso inicial puede tardar entre 1-5 minutos.
 
+**Evidencias de GitHub Pages configurado:**
+
+**Página de configuración:**
+
+![GitHub Pages Settings](../images/Captura7.png)
+
 ---
 
 ### 4. Verificar el despliegue
