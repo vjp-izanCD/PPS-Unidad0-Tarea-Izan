@@ -158,6 +158,16 @@ Para la entrega de la tarea, se deben incluir capturas de pantalla que muestren:
 
 **Importante**: Todas las capturas deben ser a pantalla completa y mostrar claramente tu nombre de usuario.
 
+**Evidencias de Docker y NGINX:**
+
+**Contenedor ejecutándose:**
+
+![Docker container running](../images/Captura8.png)
+
+**Web servida por NGINX:**
+
+![NGINX serving docs](../images/Captura9.png)
+
 ---
 
 ## Conclusión
