@@ -214,11 +214,11 @@ Todo este proceso toma aproximadamente **30-60 segundos** y ocurre sin intervenc
 
 **Workflows ejecutados:**
 
-![GitHub Actions workflows](../images/Captura6.png)
+![GitHub Actions workflows](https://raw.githubusercontent.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan/main/images/Captura6.png)
 
 **Deployments realizados:**
 
-![GitHub Deployments](../images/Captura5.png)
+![GitHub Deployments](https://raw.githubusercontent.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan/main/images/Captura5.png)
 
 ### Estados posibles:
 - ✅ **Success**: El workflow se ejecutó correctamente
