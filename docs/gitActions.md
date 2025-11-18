@@ -209,6 +209,16 @@ Todo este proceso toma aproximadamente **30-60 segundos** y ocurre sin intervenc
 - Cada step del workflow genera logs detallados
 - Si algo falla, los logs muestran exactamente dónde y por qué
 - Los logs son accesibles desde la interfaz de GitHub Actions
+- 
+**Evidencias del workflow en ejecución:**
+
+**Workflows ejecutados:**
+
+![GitHub Actions workflows](../images/Captura6.png)
+
+**Deployments realizados:**
+
+![GitHub Deployments](../images/Captura5.png)
 
 ### Estados posibles:
 - ✅ **Success**: El workflow se ejecutó correctamente
