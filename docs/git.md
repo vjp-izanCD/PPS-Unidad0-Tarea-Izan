@@ -25,7 +25,7 @@ mkdir -p calculator docs && touch calculator/gui.py calculator/__init__.py docs/
 
 **Evidencia:**
 
-![Comando mkdir](../images/Captura3.png)
+![Comando mkdir](https://raw.githubusercontent.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan/main/images/Captura3.png)
 
 ### Justificación:
 Este comando realiza dos operaciones en una sola línea:
@@ -36,7 +36,7 @@ Esta práctica demuestra eficiencia en la terminal y permite establecer una estr
 
 **Estructura del proyecto:**
 
-![Estructura de archivos con tree](../images/Captura4.png)
+![Estructura de archivos con tree](https://raw.githubusercontent.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan/main/images/Captura4.png)
 
 ---
 
@@ -84,11 +84,11 @@ GitHub actúa como repositorio remoto, permitiendo:
 
 **Repositorio creado:**
 
-![Repositorio GitHub](../images/Captura1.png)
+![Repositorio GitHub](https://raw.githubusercontent.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan/main/images/Captura1.png)
 
 **Colaborador añadido:**
 
-![Manage access con colaborador](../images/Captura2.png)
+![Manage access con colaborador](https://raw.githubusercontent.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan/main/images/Captura2.png)
 
 ---
 
