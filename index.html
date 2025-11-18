@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Calculadora Python</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Calculadora Python</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#tarea-unidad-0-ra5" class="nav-link">Tarea Unidad 0 - RA5</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#indice-de-contenidos" class="nav-link">Índice de contenidos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#acerca-de-este-proyecto" class="nav-link">Acerca de este proyecto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#enlaces-importantes" class="nav-link">Enlaces importantes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#autor" class="nav-link">Autor</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="tarea-unidad-0-ra5">Tarea Unidad 0 - RA5</h1>
+<p>Bienvenido a la documentación completa de la tarea de la Unidad 0. Este proyecto integra diversas tecnologías y prácticas modernas de desarrollo de software, incluyendo control de versiones, automatización CI/CD, despliegue web y contenedorización.</p>
+<hr />
+<h2 id="indice-de-contenidos">Índice de contenidos</h2>
+<p>Esta documentación está organizada en los siguientes apartados:</p>
+<h3 id="1-gestion-del-repositorio-con-git-y-github">1. <a href="git/">Gestión del repositorio con Git y GitHub</a></h3>
+<p>Documentación completa de todos los comandos de Git utilizados para crear y gestionar el repositorio. Incluye explicaciones detalladas del propósito de cada comando y mejores prácticas de control de versiones.</p>
+<p><strong>Contenido:</strong>
+- Inicialización del repositorio
+- Creación de la estructura del proyecto
+- Commits y staging area
+- Vinculación con GitHub
+- Gestión de colaboradores
+- Comandos útiles adicionales</p>
+<h3 id="2-automatizacion-con-github-actions">2. <a href="gitActions/">Automatización con GitHub Actions</a></h3>
+<p>Explicación del workflow de CI/CD implementado para generar automáticamente la documentación con MkDocs tras cada push al repositorio.</p>
+<p><strong>Contenido:</strong>
+- Introducción a GitHub Actions
+- Estructura del workflow
+- Explicación paso a paso del código YAML
+- Flujo completo de ejecución
+- Monitorización y depuración
+- Ventajas de la automatización</p>
+<h3 id="3-publicacion-con-github-pages">3. <a href="gitPages/">Publicación con GitHub Pages</a></h3>
+<p>Guía completa para configurar y desplegar la documentación en GitHub Pages, haciendo que sea accesible públicamente en internet.</p>
+<p><strong>Contenido:</strong>
+- ¿Qué es GitHub Pages?
+- Configuración paso a paso
+- Integración con el workflow
+- Ventajas del hosting estático
+- Solución de problemas comunes
+- Personalización avanzada</p>
+<h3 id="4-despliegue-local-con-docker-y-nginx">4. <a href="docker/">Despliegue local con Docker y NGINX</a></h3>
+<p>Documentación del proceso para servir la documentación localmente utilizando un contenedor Docker con NGINX como servidor web.</p>
+<p><strong>Contenido:</strong>
+- Introducción a Docker y NGINX
+- Comando de despliegue completo
+- Explicación detallada de parámetros
+- Verificación del despliegue
+- Comandos de gestión
+- Justificación del despliegue local</p>
+<h3 id="5-conclusiones">5. <a href="conclusiones/">Conclusiones</a></h3>
+<p>Reflexiones personales sobre el proceso de aprendizaje, dificultades encontradas, competencias adquiridas y aplicaciones futuras.</p>
+<p><strong>Contenido:</strong>
+- Aprendizajes principales
+- Reflexión sobre el proceso
+- Valor profesional de la tarea
+- Aplicación futura de conocimientos
+- Valoración personal</p>
+<hr />
+<h2 id="acerca-de-este-proyecto">Acerca de este proyecto</h2>
+<p>Este proyecto demuestra la integración de múltiples herramientas y tecnologías en un flujo de trabajo coherente:</p>
+<ul>
+<li><strong>Git y GitHub</strong>: Control de versiones y colaboración</li>
+<li><strong>Markdown</strong>: Documentación estructurada y legible</li>
+<li><strong>MkDocs</strong>: Generación de sitios web estáticos para documentación</li>
+<li><strong>GitHub Actions</strong>: Automatización CI/CD</li>
+<li><strong>GitHub Pages</strong>: Hosting estático gratuito</li>
+<li><strong>Docker y NGINX</strong>: Contenedorización y servidores web</li>
+</ul>
+<hr />
+<h2 id="enlaces-importantes">Enlaces importantes</h2>
+<ul>
+<li><strong>Repositorio GitHub</strong>: <a href="https://github.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan">vjp-izanCD/PPS-Unidad0-Tarea-Izan</a></li>
+<li><strong>Documentación online</strong>: <a href="https://vjp-izancd.github.io/PPS-Unidad0-Tarea-Izan/">https://vjp-izancd.github.io/PPS-Unidad0-Tarea-Izan/</a></li>
+</ul>
+<hr />
+<h2 id="autor">Autor</h2>
+<p><strong>Izan Correa Díaz</strong><br />
+Alumno de Programación y Plataformas de Software<br />
+Unidad 0 - RA5</p>
+<hr />
+<p><em>Esta documentación fue generada automáticamente con MkDocs y desplegada mediante GitHub Actions.</em></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-11-18 19:20:19.592968+00:00
+-->

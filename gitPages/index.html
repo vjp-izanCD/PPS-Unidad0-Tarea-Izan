@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Publicación con GitHub Pages - Calculadora Python</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Calculadora Python</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#publicacion-con-github-pages" class="nav-link">Publicación con GitHub Pages</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#que-es-github-pages" class="nav-link">¿Qué es GitHub Pages?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#proceso-de-configuracion-paso-a-paso" class="nav-link">Proceso de configuración paso a paso</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#estructura-de-urls-de-github-pages" class="nav-link">Estructura de URLs de GitHub Pages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#integracion-con-el-workflow" class="nav-link">Integración con el Workflow</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ventajas-de-usar-github-pages" class="nav-link">Ventajas de usar GitHub Pages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#monitorizacion-y-gestion" class="nav-link">Monitorización y gestión</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#solucion-de-problemas-comunes" class="nav-link">Solución de problemas comunes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#personalizacion-avanzada" class="nav-link">Personalización avanzada</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#enlace-de-la-documentacion-publicada" class="nav-link">Enlace de la documentación publicada</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conclusion" class="nav-link">Conclusión</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="publicacion-con-github-pages">Publicación con GitHub Pages</h1>
+<p>En este documento se detalla el proceso completo para activar y configurar GitHub Pages, permitiendo publicar la documentación del proyecto de forma accesible y profesional en internet.</p>
+<hr />
+<h2 id="que-es-github-pages">¿Qué es GitHub Pages?</h2>
+<p>GitHub Pages es un servicio de alojamiento web estático gratuito ofrecido por GitHub que permite publicar sitios web directamente desde un repositorio. Es especialmente útil para:</p>
+<ul>
+<li><strong>Documentación de proyectos</strong>: Como en nuestro caso</li>
+<li><strong>Portfolios personales</strong>: Mostrar proyectos y habilidades</li>
+<li><strong>Blogs técnicos</strong>: Usando generadores como Jekyll o MkDocs</li>
+<li><strong>Páginas de proyectos open source</strong>: Presentación pública de herramientas</li>
+</ul>
+<h3 id="caracteristicas-principales">Características principales:</h3>
+<ul>
+<li>✅ <strong>Completamente gratuito</strong> para repositorios públicos</li>
+<li>✅ <strong>Dominio propio disponible</strong>: Puedes usar tu dominio personalizado</li>
+<li>✅ <strong>HTTPS automático</strong>: Seguridad incluida sin configuración adicional</li>
+<li>✅ <strong>Actualización instantánea</strong>: Cambios reflejados en segundos/minutos</li>
+<li>✅ <strong>Integración total con Git</strong>: Control de versiones de tu web</li>
+</ul>
+<hr />
+<h2 id="proceso-de-configuracion-paso-a-paso">Proceso de configuración paso a paso</h2>
+<h3 id="1-acceder-a-la-configuracion-del-repositorio">1. Acceder a la configuración del repositorio</h3>
+<p><strong>Pasos</strong>:
+1. Navegar al repositorio en GitHub
+2. Hacer clic en la pestaña <strong>"Settings"</strong> (Configuración) en la parte superior
+3. En el menú lateral izquierdo, buscar y hacer clic en <strong>"Pages"</strong></p>
+<p><strong>Justificación</strong>: La sección de Pages contiene todas las opciones necesarias para configurar la publicación del sitio web, incluyendo la selección de rama, carpeta y dominio personalizado.</p>
+<hr />
+<h3 id="2-configurar-la-fuente-de-publicacion">2. Configurar la fuente de publicación</h3>
+<p><strong>Configuración</strong>:
+- <strong>Branch (Rama)</strong>: <code>gh-pages</code> 
+- <strong>Folder (Carpeta)</strong>: <code>/ (root)</code></p>
+<p><strong>Justificación</strong>:
+- La rama <code>gh-pages</code> es creada automáticamente por nuestro workflow de GitHub Actions
+- Esta rama contiene únicamente los archivos HTML/CSS/JS generados por MkDocs
+- Separar el código fuente (rama <code>main</code>) del contenido publicado (rama <code>gh-pages</code>) es una buena práctica que mantiene el repositorio organizado
+- La carpeta root (<code>/</code>) indica que todos los archivos de la rama serán publicados</p>
+<hr />
+<h3 id="3-guardar-configuracion">3. Guardar configuración</h3>
+<p><strong>Acción</strong>: Hacer clic en el botón <strong>"Save"</strong></p>
+<p><strong>Justificación</strong>: Al guardar, GitHub Pages comienza el proceso de despliegue. Este proceso:
+1. Valida la configuración
+2. Lee los archivos de la rama especificada
+3. Genera la infraestructura necesaria
+4. Publica el sitio en los servidores de GitHub</p>
+<p>Este proceso inicial puede tardar entre 1-5 minutos.</p>
+<p><strong>Evidencias de GitHub Pages configurado:</strong></p>
+<p><strong>Página de configuración:</strong></p>
+<p><img alt="GitHub Pages Settings" src="https://raw.githubusercontent.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan/main/images/Captura7.png" /></p>
+<hr />
+<h3 id="4-verificar-el-despliegue">4. Verificar el despliegue</h3>
+<p><strong>Indicadores de éxito</strong>:
+- Aparece un mensaje verde indicando: <em>"Your site is published at https://vjp-izancd.github.io/PPS-Unidad0-Tarea-Izan/"</em>
+- Se puede ver el enlace clickeable a la web
+- El estado muestra un check verde ✅</p>
+<p><strong>Justificación</strong>: Esta confirmación visual garantiza que:
+- La configuración es correcta
+- El sitio está accesible públicamente
+- El dominio generado sigue el patrón: <code>https://[usuario].github.io/[repositorio]/</code></p>
+<hr />
+<h2 id="estructura-de-urls-de-github-pages">Estructura de URLs de GitHub Pages</h2>
+<h3 id="para-cuentas-de-usuario">Para cuentas de usuario:</h3>
+<pre><code>https://[usuario].github.io/[repositorio]/
+</code></pre>
+<p><strong>Ejemplo de este proyecto</strong>:</p>
+<pre><code>https://vjp-izancd.github.io/PPS-Unidad0-Tarea-Izan/
+</code></pre>
+<h3 id="desglose">Desglose:</h3>
+<ul>
+<li><code>vjp-izancd</code>: Nombre de usuario de GitHub</li>
+<li><code>github.io</code>: Dominio base de GitHub Pages</li>
+<li><code>PPS-Unidad0-Tarea-Izan</code>: Nombre del repositorio</li>
+</ul>
+<hr />
+<h2 id="integracion-con-el-workflow">Integración con el Workflow</h2>
+<p>Nuestro workflow de GitHub Actions y GitHub Pages trabajan juntos de la siguiente manera:</p>
+<h3 id="flujo-completo">Flujo completo:</h3>
+<ol>
+<li><strong>Desarrollador hace push</strong> a la rama <code>main</code> con cambios en la documentación</li>
+<li><strong>GitHub Actions se activa</strong> automáticamente</li>
+<li><strong>El workflow ejecuta</strong>:</li>
+<li>Instala dependencias (MkDocs)</li>
+<li>Genera archivos HTML estáticos</li>
+<li>Hace push a la rama <code>gh-pages</code></li>
+<li><strong>GitHub Pages detecta</strong> cambios en <code>gh-pages</code></li>
+<li><strong>GitHub Pages redespliega</strong> el sitio automáticamente</li>
+<li><strong>La web se actualiza</strong> en cuestión de segundos</li>
+</ol>
+<h3 id="diagrama-del-flujo">Diagrama del flujo:</h3>
+<pre><code>[Push a main] → [GitHub Actions] → [mkdocs build] → [Push a gh-pages] → [GitHub Pages] → [Web Pública]
+</code></pre>
+<hr />
+<h2 id="ventajas-de-usar-github-pages">Ventajas de usar GitHub Pages</h2>
+<h3 id="1-hosting-gratuito-e-ilimitado">1. <strong>Hosting gratuito e ilimitado</strong></h3>
+<ul>
+<li>Sin costes de servidores</li>
+<li>Sin límites de tráfico para uso normal</li>
+<li>Ancho de banda generoso (100GB/mes recomendado)</li>
+</ul>
+<h3 id="2-mantenimiento-cero">2. <strong>Mantenimiento cero</strong></h3>
+<ul>
+<li>No hay servidores que configurar</li>
+<li>No hay actualizaciones de seguridad que aplicar</li>
+<li>GitHub se encarga de la infraestructura</li>
+</ul>
+<h3 id="3-rendimiento-excelente">3. <strong>Rendimiento excelente</strong></h3>
+<ul>
+<li>CDN global de GitHub</li>
+<li>Carga rápida desde cualquier parte del mundo</li>
+<li>Optimización automática de recursos</li>
+</ul>
+<h3 id="4-https-incluido">4. <strong>HTTPS incluido</strong></h3>
+<ul>
+<li>Certificado SSL gratuito y automático</li>
+<li>Renovación automática</li>
+<li>Seguridad sin esfuerzo adicional</li>
+</ul>
+<h3 id="5-control-de-versiones-integrado">5. <strong>Control de versiones integrado</strong></h3>
+<ul>
+<li>Cada cambio queda registrado en Git</li>
+<li>Fácil revertir a versiones anteriores</li>
+<li>Historial completo de modificaciones</li>
+</ul>
+<h3 id="6-integracion-perfecta-con-el-ecosistema-github">6. <strong>Integración perfecta con el ecosistema GitHub</strong></h3>
+<ul>
+<li>Funciona nativamente con GitHub Actions</li>
+<li>Vinculado directamente al repositorio</li>
+<li>Sin configuraciones complejas</li>
+</ul>
+<hr />
+<h2 id="monitorizacion-y-gestion">Monitorización y gestión</h2>
+<h3 id="ver-el-estado-del-despliegue">Ver el estado del despliegue:</h3>
+<ol>
+<li><strong>En la página de Settings &gt; Pages</strong>:</li>
+<li>Muestra el estado actual (publicado, en proceso, error)</li>
+<li>Enlace directo al sitio web</li>
+<li>
+<p>Última fecha de actualización</p>
+</li>
+<li>
+<p><strong>En la pestaña Actions</strong>:</p>
+</li>
+<li>Ver ejecuciones del workflow de publicación</li>
+<li>Logs detallados de cada despliegue</li>
+<li>
+<p>Historial completo de actualizaciones</p>
+</li>
+<li>
+<p><strong>En la pestaña Environments</strong> (si está habilitada):</p>
+</li>
+<li>Historial de despliegues a <code>github-pages</code></li>
+<li>Estado de cada versión publicada</li>
+<li>URL de cada despliegue</li>
+</ol>
+<hr />
+<h2 id="solucion-de-problemas-comunes">Solución de problemas comunes</h2>
+<h3 id="problema-1-404-no-se-encuentra-la-pagina">Problema 1: "404 - No se encuentra la página"</h3>
+<p><strong>Causas posibles</strong>:
+- La rama <code>gh-pages</code> está vacía
+- No existe un archivo <code>index.html</code>
+- La configuración de Pages no está guardada</p>
+<p><strong>Solución</strong>:
+- Verificar que el workflow de Actions se ejecutó correctamente
+- Comprobar que la rama <code>gh-pages</code> tiene contenido
+- Revisar la configuración en Settings &gt; Pages</p>
+<hr />
+<h3 id="problema-2-los-cambios-no-se-reflejan">Problema 2: "Los cambios no se reflejan"</h3>
+<p><strong>Causas posibles</strong>:
+- Caché del navegador
+- El despliegue aún no ha terminado
+- Error en el workflow de Actions</p>
+<p><strong>Solución</strong>:
+- Forzar actualización con <code>Ctrl + F5</code> o <code>Cmd + Shift + R</code>
+- Esperar 1-2 minutos para que se complete el despliegue
+- Revisar la pestaña Actions en busca de errores</p>
+<hr />
+<h3 id="problema-3-estilos-css-no-se-cargan-correctamente">Problema 3: "Estilos CSS no se cargan correctamente"</h3>
+<p><strong>Causa</strong>:
+- Rutas absolutas incorrectas en el código HTML</p>
+<p><strong>Solución</strong>:
+- Asegurar que MkDocs está configurado con <code>site_url</code> correcto en <code>mkdocs.yml</code>
+- Usar rutas relativas en los archivos Markdown</p>
+<hr />
+<h2 id="personalizacion-avanzada">Personalización avanzada</h2>
+<h3 id="dominio-personalizado">Dominio personalizado</h3>
+<p>Si tienes un dominio propio, puedes configurarlo:</p>
+<ol>
+<li>En Settings &gt; Pages, agregar el dominio en "Custom domain"</li>
+<li>En tu proveedor DNS, crear un registro CNAME apuntando a <code>[usuario].github.io</code></li>
+<li>Esperar a que se verifique el dominio (puede tardar hasta 24 horas)</li>
+</ol>
+<p><strong>Ventajas</strong>:
+- URL profesional y fácil de recordar
+- Mayor credibilidad del proyecto
+- Mejor posicionamiento SEO</p>
+<hr />
+<h3 id="forzar-https">Forzar HTTPS</h3>
+<p><strong>Recomendación</strong>: Siempre activar la opción "Enforce HTTPS" en Settings &gt; Pages</p>
+<p><strong>Justificación</strong>:
+- Mayor seguridad para los visitantes
+- Mejor ranking en motores de búsqueda
+- Cumplimiento de estándares web modernos
+- Protección contra ataques man-in-the-middle</p>
+<hr />
+<h2 id="enlace-de-la-documentacion-publicada">Enlace de la documentación publicada</h2>
+<h3 id="url-del-proyecto">URL del proyecto:</h3>
+<pre><code>https://vjp-izancd.github.io/PPS-Unidad0-Tarea-Izan/
+</code></pre>
+<p><strong>Este enlace debe incluirse en</strong>:
+- El archivo README.md del repositorio
+- La descripción del repositorio en GitHub
+- La entrega de la tarea en la plataforma educativa</p>
+<hr />
+<h2 id="conclusion">Conclusión</h2>
+<p>GitHub Pages es una herramienta imprescindible para cualquier desarrollador que quiera:</p>
+<ul>
+<li>Compartir documentación de forma profesional</li>
+<li>Publicar portfolios y proyectos personales</li>
+<li>Demostrar habilidades técnicas</li>
+<li>Colaborar en proyectos open source</li>
+</ul>
+<p>La combinación de <strong>MkDocs + GitHub Actions + GitHub Pages</strong> crea un pipeline completamente automatizado que:</p>
+<p>✅ Ahorra tiempo
+✅ Reduce errores
+✅ Garantiza consistencia
+✅ Es gratuito
+✅ Requiere configuración mínima
+✅ Es mantenible a largo plazo</p>
+<p>Esta arquitectura representa las mejores prácticas modernas de desarrollo y documentación de software.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

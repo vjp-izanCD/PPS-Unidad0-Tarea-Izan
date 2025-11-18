@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Despliegue local con Docker y NGINX - Calculadora Python</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Calculadora Python</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#despliegue-local-con-docker-y-nginx" class="nav-link">Despliegue local con Docker y NGINX</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#que-es-docker" class="nav-link">¿Qué es Docker?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#que-es-nginx" class="nav-link">¿Qué es NGINX?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#comando-de-despliegue" class="nav-link">Comando de despliegue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#desglose-y-explicacion-del-comando" class="nav-link">Desglose y explicación del comando</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#verificar-el-despliegue" class="nav-link">Verificar el despliegue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#comandos-utiles-de-gestion" class="nav-link">Comandos útiles de gestión</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#por-que-desplegar-localmente-si-ya-esta-en-github-pages" class="nav-link">¿Por qué desplegar localmente si ya está en GitHub Pages?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#capturas-requeridas" class="nav-link">Capturas requeridas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conclusion" class="nav-link">Conclusión</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="despliegue-local-con-docker-y-nginx">Despliegue local con Docker y NGINX</h1>
+<p>En esta sección se documenta el proceso completo para desplegar la documentación generada por MkDocs utilizando un contenedor Docker con NGINX como servidor web.</p>
+<hr />
+<h2 id="que-es-docker">¿Qué es Docker?</h2>
+<p>Docker es una plataforma de virtualización a nivel de contenedor que permite empaquetar aplicaciones con todas sus dependencias en unidades estandarizadas llamadas contenedores.</p>
+<h3 id="ventajas-de-usar-docker">Ventajas de usar Docker:</h3>
+<ul>
+<li>✅ <strong>Portabilidad</strong>: "Funciona en mi máquina" se convierte en "funciona en todas las máquinas"</li>
+<li>✅ <strong>Aislamiento</strong>: Cada contenedor está aislado del sistema anfitrión</li>
+<li>✅ <strong>Ligereza</strong>: Más rápido y eficiente que máquinas virtuales tradicionales</li>
+<li>✅ <strong>Reproducibilidad</strong>: Entornos consistentes entre desarrollo y producción</li>
+<li>✅ <strong>Escalabilidad</strong>: Fácil replicar y escalar servicios</li>
+</ul>
+<hr />
+<h2 id="que-es-nginx">¿Qué es NGINX?</h2>
+<p>NGINX es un servidor web de alto rendimiento, también usado como proxy inverso, balanceador de carga y caché HTTP.</p>
+<h3 id="por-que-usar-nginx">Por qué usar NGINX:</h3>
+<ul>
+<li>Excelente rendimiento para contenido estático</li>
+<li>Bajo consumo de recursos</li>
+<li>Configuración simple y potente</li>
+<li>Muy usado en producción</li>
+</ul>
+<hr />
+<h2 id="comando-de-despliegue">Comando de despliegue</h2>
+<h3 id="comando-completo">Comando completo:</h3>
+<pre><code class="language-bash">docker run --name PPSUnidad0-TareaIzan -d -p 8085:80 -v &quot;$(pwd)/site:/usr/share/nginx/html&quot; nginx
+</code></pre>
+<hr />
+<h2 id="desglose-y-explicacion-del-comando">Desglose y explicación del comando</h2>
+<h3 id="1-docker-run">1. <code>docker run</code></h3>
+<p><strong>Justificación</strong>: Comando base para crear y ejecutar un nuevo contenedor.</p>
+<h3 id="2-name-ppsunidad0-tareaizan">2. <code>--name PPSUnidad0-TareaIzan</code></h3>
+<p><strong>Justificación</strong>: Asigna un nombre identificativo al contenedor. Facilita su gestión posterior (parar, reiniciar, eliminar).</p>
+<h3 id="3-d-detached-mode">3. <code>-d</code> (detached mode)</h3>
+<p><strong>Justificación</strong>: Ejecuta el contenedor en segundo plano, liberando la terminal.</p>
+<h3 id="4-p-808580">4. <code>-p 8085:80</code></h3>
+<p><strong>Justificación</strong>: 
+- Mapea el puerto 8085 de tu máquina al puerto 80 del contenedor
+- Permite acceder a la web desde <code>http://localhost:8085</code>
+- El puerto 80 es el puerto por defecto de NGINX dentro del contenedor</p>
+<h3 id="5-v-pwdsiteusrsharenginxhtml">5. <code>-v "$(pwd)/site:/usr/share/nginx/html"</code></h3>
+<p><strong>Justificación</strong>:
+- Crea un volumen (bind mount) entre tu máquina y el contenedor
+- <code>$(pwd)/site</code>: Carpeta local donde MkDocs genera la documentación
+- <code>/usr/share/nginx/html</code>: Carpeta donde NGINX busca archivos para servir
+- Cualquier cambio en <code>site/</code> se refleja instantáneamente en el contenedor</p>
+<h3 id="6-nginx">6. <code>nginx</code></h3>
+<p><strong>Justificación</strong>: Especifica la imagen oficial de NGINX desde Docker Hub.</p>
+<hr />
+<h2 id="verificar-el-despliegue">Verificar el despliegue</h2>
+<h3 id="1-comprobar-que-el-contenedor-esta-corriendo">1. Comprobar que el contenedor está corriendo:</h3>
+<pre><code class="language-bash">docker ps
+</code></pre>
+<p><strong>Salida esperada</strong>: Debe aparecer el contenedor <code>PPSUnidad0-TareaIzan</code> en estado <code>Up</code>.</p>
+<h3 id="2-acceder-a-la-documentacion">2. Acceder a la documentación:</h3>
+<p>Abrir navegador y visitar:</p>
+<pre><code>http://localhost:8085
+</code></pre>
+<h3 id="3-inspeccionar-el-contenedor">3. Inspeccionar el contenedor:</h3>
+<pre><code class="language-bash">docker inspect PPSUnidad0-TareaIzan
+</code></pre>
+<p><strong>Justificación</strong>: Muestra toda la configuración del contenedor (puertos, volúmenes, red, etc.).</p>
+<hr />
+<h2 id="comandos-utiles-de-gestion">Comandos útiles de gestión</h2>
+<h3 id="detener-el-contenedor">Detener el contenedor:</h3>
+<pre><code class="language-bash">docker stop PPSUnidad0-TareaIzan
+</code></pre>
+<h3 id="reiniciar-el-contenedor">Reiniciar el contenedor:</h3>
+<pre><code class="language-bash">docker restart PPSUnidad0-TareaIzan
+</code></pre>
+<h3 id="ver-logs-del-contenedor">Ver logs del contenedor:</h3>
+<pre><code class="language-bash">docker logs PPSUnidad0-TareaIzan
+</code></pre>
+<h3 id="eliminar-el-contenedor">Eliminar el contenedor:</h3>
+<pre><code class="language-bash">docker rm -f PPSUnidad0-TareaIzan
+</code></pre>
+<h3 id="acceder-al-interior-del-contenedor">Acceder al interior del contenedor:</h3>
+<pre><code class="language-bash">docker exec -it PPSUnidad0-TareaIzan /bin/bash
+</code></pre>
+<hr />
+<h2 id="por-que-desplegar-localmente-si-ya-esta-en-github-pages">¿Por qué desplegar localmente si ya está en GitHub Pages?</h2>
+<p>Aunque la documentación ya está publicada en GitHub Pages, desplegarla localmente con Docker tiene varios propósitos:</p>
+<h3 id="1-aprendizaje-de-docker">1. <strong>Aprendizaje de Docker</strong></h3>
+<p>Demuestra conocimiento de:
+- Contenedores y virtualización
+- Servidores web (NGINX)
+- Mapeo de puertos
+- Gestión de volúmenes</p>
+<h3 id="2-desarrollo-local">2. <strong>Desarrollo local</strong></h3>
+<ul>
+<li>Previsualizar cambios antes de hacer push</li>
+<li>Probar la documentación sin conexión a internet</li>
+<li>Desarrollo más rápido sin esperar a GitHub Actions</li>
+</ul>
+<h3 id="3-experiencia-practica">3. <strong>Experiencia práctica</strong></h3>
+<ul>
+<li>Simula entornos de producción reales</li>
+<li>Práctica con herramientas DevOps</li>
+<li>Base para proyectos más complejos</li>
+</ul>
+<h3 id="4-requisito-de-la-tarea">4. <strong>Requisito de la tarea</strong></h3>
+<ul>
+<li>Cumple con los criterios de evaluación</li>
+<li>Demuestra competencias técnicas</li>
+</ul>
+<hr />
+<h2 id="capturas-requeridas">Capturas requeridas</h2>
+<p>Para la entrega de la tarea, se deben incluir capturas de pantalla que muestren:</p>
+<ol>
+<li><strong>Ejecución del comando <code>docker run</code></strong>: Terminal mostrando el comando completo y el usuario</li>
+<li><strong>Navegador con la documentación en localhost:8085</strong>: URL visible y contenido cargado</li>
+<li><strong>Salida de <code>docker inspect</code></strong>: Mostrando la configuración completa del contenedor</li>
+<li><strong>Comando <code>docker ps</code></strong>: Listado de contenedores activos</li>
+</ol>
+<p><strong>Importante</strong>: Todas las capturas deben ser a pantalla completa y mostrar claramente tu nombre de usuario.</p>
+<p><strong>Evidencias de Docker y NGINX:</strong></p>
+<p><strong>Contenedor ejecutándose:</strong></p>
+<p><img alt="Docker container running" src="https://raw.githubusercontent.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan/main/images/Captura8.png" /></p>
+<p><strong>Web servida por NGINX:</strong></p>
+<p><img alt="NGINX serving docs" src="https://raw.githubusercontent.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan/main/images/Captura9.png" /></p>
+<hr />
+<h2 id="conclusion">Conclusión</h2>
+<p>El despliegue de la documentación con Docker y NGINX:</p>
+<p>✅ Demuestra conocimientos de contenedorización
+✅ Proporciona un entorno de desarrollo local
+✅ Simula despliegues en producción
+✅ Complementa el despliegue en GitHub Pages
+✅ Es una habilidad fundamental en DevOps moderno</p>
+<p>Esta configuración puede escalarse fácilmente a entornos más complejos con docker-compose, orquestación con Kubernetes, o despliegues en la nube.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
