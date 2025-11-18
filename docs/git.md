@@ -23,12 +23,20 @@ Este comando inicializa un nuevo repositorio local de Git en el directorio actua
 mkdir -p calculator docs && touch calculator/gui.py calculator/__init__.py docs/index.md mkdocs.yml README.md requiriments.txt
 ```
 
+**Evidencia:**
+
+![Comando mkdir](../images/Captura3.png)
+
 ### Justificación:
 Este comando realiza dos operaciones en una sola línea:
 - `mkdir -p calculator docs`: Crea las carpetas `calculator` y `docs` de forma simultánea. El flag `-p` permite crear múltiples directorios y no genera error si ya existen.
 - `touch ...`: Crea todos los archivos necesarios vacíos de una sola vez.
 
 Esta práctica demuestra eficiencia en la terminal y permite establecer una estructura profesional del proyecto desde el inicio.
+
+**Estructura del proyecto:**
+
+![Estructura de archivos con tree](../images/Captura4.png)
 
 ---
 
@@ -71,6 +79,16 @@ GitHub actúa como repositorio remoto, permitiendo:
 - **Colaboración**: Facilita que el profesor y otros colaboradores accedan al proyecto
 - **Historial distribuido**: Múltiples copias del historial del proyecto
 - **Integración con herramientas**: Permite usar GitHub Actions, Pages, etc.
+
+**Evidencias:**
+
+**Repositorio creado:**
+
+![Repositorio GitHub](../images/Captura1.png)
+
+**Colaborador añadido:**
+
+![Manage access con colaborador](../images/Captura2.png)
 
 ---
 
