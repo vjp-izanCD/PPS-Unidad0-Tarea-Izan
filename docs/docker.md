@@ -162,11 +162,11 @@ Para la entrega de la tarea, se deben incluir capturas de pantalla que muestren:
 
 **Contenedor ejecutándose:**
 
-![Docker container running](../images/Captura8.png)
+![Docker container running](https://raw.githubusercontent.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan/main/images/Captura8.png)
 
 **Web servida por NGINX:**
 
-![NGINX serving docs](../images/Captura9.png)
+![NGINX serving docs](https://raw.githubusercontent.com/vjp-izanCD/PPS-Unidad0-Tarea-Izan/main/images/Captura9.png)
 
 ---
 
